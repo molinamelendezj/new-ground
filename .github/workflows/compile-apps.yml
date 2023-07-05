@@ -21,10 +21,9 @@ jobs:
       run: make compile
 
     - name: test
-      run: make test
+      run: make test >> results.txt
 
     - name: Comment PR
       uses: thollander/actions-comment-pull-request@v2
       with:
-        message: |
-          Hello world ! :wave:
+        filePath: results.txt
