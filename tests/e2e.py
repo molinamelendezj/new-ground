@@ -84,3 +84,6 @@ results = dict(
         tests=test_runs,
         )
 print(json.dumps(results, indent=4))
+f = open("results.txt", "a")
+f.write(json.dumps(results, indent=4))
+f.close()
